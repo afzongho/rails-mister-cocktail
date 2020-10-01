@@ -1,0 +1,19 @@
+.cocktail-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 50px;
+    margin: 0 50px;
+  }
+  
+  #cocktail-cards .cocktail-card {
+    cursor: grab;
+  }
+  
+  #cocktail-cards .cocktail-card:active {
+    cursor: grabbing;
+  }
+  
+  #cocktail-cards .cocktail-card.ghost {
+    filter: grayscale(1);
+    opacity: 0.5;
+  }

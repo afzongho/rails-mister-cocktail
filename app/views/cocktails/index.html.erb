@@ -1,20 +1,12 @@
-<h1>Cocktails</h1>
-
-<table>
-  <thead>
-    <tr class="table-primary">
-      <th>Name</th>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div >
+  <%= render 'banner'%>
+  <div class="top">
+    <h1 class>Create a Cocktail Recipe</h1>
+    <%= link_to 'Add Cocktail', new_cocktail_path , id: 'title-button', class: 'btn btn-secondary p-2' %>
+  </div>
+  <div id="cocktail-cards" class="cocktail-cards">
     <% @cocktails.each do |cocktail| %>
       <%= render 'card', cocktail: cocktail %>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Cocktail', new_cocktail_path %>
+  </div>
+</div>
